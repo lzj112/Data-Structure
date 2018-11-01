@@ -22,6 +22,10 @@ int main()
     return 0;
 }
 
+/*
+从后向前复制
+先算好空格换成%20的话原有存储空间够不够
+*/
 void ExchangeBlank(char *str, int stringLength)
 {
     if (str == nullptr || stringLength <= 0)

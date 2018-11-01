@@ -11,6 +11,10 @@ struct BinaryTreeNode
     BinaryTreeNode* m_pParent;
 };
 
+/*
+中序遍历顺序:左中右,所有情况都在下面注释中
+*/
+
 BinaryTreeNode* GetNext(BinaryTreeNode* pNode) 
 {
     if (pNode == nullptr) 

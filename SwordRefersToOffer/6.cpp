@@ -68,7 +68,7 @@ void List::useRecursive(struct ListNode *p)
 
     if (p->m_pNext)
     {
-        useRecursive(p->m_pNext);
+        useRecursive(p->m_pNext);   //递归
     }
     if (p != head)
     cout << p->m_nKey << ' ';
@@ -80,10 +80,10 @@ void List::useStack()
     struct ListNode *p = head->m_pNext;
     while (p)
     {
-        node.push(p);
+        node.push(p);   //进栈
         p = p->m_pNext;
     }
-    while (!node.empty())
+    while (!node.empty())   //打印栈中所有元素
     {
         cout << node.top()->m_nKey << ' ';
         node.pop();
@@ -104,3 +104,7 @@ int main()
 
     return 0;
 }
+
+/*
+较简单,要么使用栈,要么使用递归
+*/

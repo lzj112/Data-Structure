@@ -26,6 +26,10 @@ int main()
     cout << endl;
 }
 
+/*
+重排数组,首先比较数组元素m和下标i是否相等,不相等就和数组下标m的元素交换,在比较,不相等在交换直到相等继续扫描下一个
+这样等哪一个元素m和下标i不相等时交换的时候,发现下标m处的元素和相等,那这个元素就是重复的
+*/
 void findDuplicate(array<int, N>& numbers)
 {
     if (numbers.empty())
