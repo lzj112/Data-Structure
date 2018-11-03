@@ -20,7 +20,8 @@ public:
         int length = rotateArray.size();
         int front = 0;
         int rear = length - 1;
-        if (rotateArray[front] == rotateArray[rear]) //特例,首尾值相等,只能遍历
+        int middle = (front + rear) / 2;
+        if (rotateArray[front] == rotateArray[rear] && rotateArray[front] == rotateArray[middle]) //特例,首尾值相等,只能遍历
         {
             int min = rotateArray[front];
             for (int x : rotateArray) 
@@ -38,7 +39,7 @@ public:
         }
         else 
         {
-            int middle = (front + rear) / 2;
+            // int middle = (front + rear) / 2;
             while (rotateArray[front] > rotateArray[rear]) //二分查找
             {
                 if (rotateArray[middle] > rotateArray[front]) 
@@ -57,12 +58,13 @@ public:
                 }   
             }
         }
+        return 0;
     }
 };
 int main() 
 {
     Solution A;
-    vector<int> tmp = {3, 4, 5, 1, 2};
+    vector<int> tmp = {1, 1, 1, 0, 1, 1, 1};
     cout <<  "here is min :" << A.minNumberInRotateArray(tmp) << endl;
 }
 
