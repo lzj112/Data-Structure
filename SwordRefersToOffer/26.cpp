@@ -1,3 +1,8 @@
+/*
+树的子结构
+输入两颗二叉树, 判断树 B 是不是 树 A 的子结构
+*/
+
 #include <iostream>
 using namespace std;
 
