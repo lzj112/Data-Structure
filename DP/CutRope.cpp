@@ -35,7 +35,7 @@ int mome(int len)
 {
     if (len == 0) 
         return 0;
-    else if (earning[len] != -1) //如果有记录
+    else if (earning[len] != 0) //如果有记录
         return earning[len];
     
     int max = 0;
