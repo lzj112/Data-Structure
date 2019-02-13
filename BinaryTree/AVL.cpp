@@ -120,7 +120,7 @@ private:
     //插入结点
     void insertNode(AVLNode** t, int v) 
     {   
-        //插入结点,使用二级指针改变
+        //插入结点,使用二级指针改变父节点左右子树指针指向
         if (*t == nullptr) 
             *t = new AVLNode(v); 
         else if (v < (*t)->val) 
@@ -253,9 +253,9 @@ int main()
     AVLTree tree;
     // vector<int> tmp = {99, 1, 34, 23, 67, 7};
     vector<int> tmp = {99, 1, 34, 56, 23, 67, 78, 9, 45, 684, 35, 678, 234, 89, 90, 24, 672, 1, 1, 4};
-    for (int i = 0; i < tmp.size(); i++) 
+    for (auto x : tmp) 
     {
-        tree.insert(tmp[i]);
+        tree.insert(x);
     }
     tree.traverse();
 
