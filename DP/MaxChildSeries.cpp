@@ -15,11 +15,11 @@ int maxSubSequm(int a[], int len)
     for (int i = 0; i < len; i++) 
     {
         if (subNum <= 0)
-            subNum = a[i];
+            subNum = a[i];  //如果之前子序列小于等于零,那么对后面的子序列号没有帮助,直接抛弃,以当前位置重新开始
         else 
-            subNum += a[i];
+            subNum += a[i]; //之前子序列加到目前为止大于零,那么继续累加
         if (subNum > maxNum)
-            maxNum = subNum;
+            maxNum = subNum;    //更换最大值
     }
 
     return maxNum;
