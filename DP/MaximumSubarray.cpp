@@ -25,6 +25,7 @@ class Solution
         int tmpNum = 0;
         for (int i = 0; i < nums.size(); i++) 
         {
+            if (nums[i] > 0)    //只有大于0的数才会对和有贡献
             for (int j = i; j < nums.size(); j++) 
             {
                 tmpNum += nums[j];
