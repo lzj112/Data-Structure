@@ -58,8 +58,8 @@ void quick_sort(int l, int r, vector<int>& arr)
 }
 
 //堆排序
-//i结点的父节点下标为(i - 1) / 2,其左子结点下标为2 * i + 1,右子结点下标为2 * i + 2
 
+//i结点的父节点下标为(i - 1) / 2,其左子结点下标为2 * i + 1,右子结点下标为2 * i + 2
 //调整元素使其成为一个大顶堆/小顶堆
 //i是指向的是第i个非叶子结点
 void heap_adjust(vector<int>& arr, int i, int len) 
@@ -93,8 +93,8 @@ void heap_sort(vector<int>& arr)
     //不停交换堆顶元素和数组尾元素,再将剩下的元素重新调整编程大顶堆
     for (int i = arr.size() - 1; i > 0; i--) 
     {
-        swap(arr[0], arr[i]);
-        heap_adjust(arr, 0, i);
+        swap(arr[0], arr[i]);   //交换堆顶元素和数组末尾元素
+        heap_adjust(arr, 0, i); //对剩下的元素进行堆重建
     }
 }
 
