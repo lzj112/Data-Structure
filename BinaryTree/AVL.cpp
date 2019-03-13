@@ -1,4 +1,5 @@
 #include <queue>
+#include <stack>
 #include <vector>
 #include <iostream>
 using namespace std;
@@ -42,7 +43,7 @@ public:
     {
         delNodeFromTree(&root, val);
     }
-
+    
     //层次遍历
     void traverse()
     {
@@ -65,6 +66,7 @@ public:
             cout << endl;
         }
     }
+    
 
     //求结点所在高度(只有一个根结点时高度为1)
     int getHeight(AVLNode* t) 
@@ -242,9 +244,7 @@ private:
             }
         }
     }
-
-
-
+    
     AVLNode* root;
 };
 
@@ -258,6 +258,7 @@ int main()
         tree.insert(x);
     }
     tree.traverse();
+
 
     AVLNode* p = tree.findNode(672);
     if (p == nullptr)
@@ -273,4 +274,5 @@ int main()
         cout << "672 is not in the tree" << endl;
     else 
         cout << "succeed in finding " << p->val << endl;
+        
 }

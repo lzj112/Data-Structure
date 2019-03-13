@@ -23,8 +23,8 @@ void preorderTraversalRecursion(TreeNode *node)
         return ;
     }
     
-    TreeNode* tmpNode;
-    treeNodeStack.push(node);
+    TreeNode* tmpNode = node;
+    treeNodeStack.push(tmpNode);
     while (!treeNodeStack.empty()) 
     {
         tmpNode = treeNodeStack.top();  //访问栈顶元素
@@ -53,11 +53,11 @@ void inorderTraversalRecursion(TreeNode *node)
     }
     
     TreeNode* tmpNode = node;
-    while (!treeNodeStack.empty()) 
+    while (!treeNodeStack.empty() || tmpNode != nullptr) 
     {
         if (tmpNode != nullptr)  
         {
-            treeNodeStack.push(tmpNode->left);  //如果左节点不为空一直将左节点入栈
+            treeNodeStack.push(tmpNode);  //如果左节点不为空一直将左节点入栈
             tmpNode = tmpNode->left;
         }
         else    //当左节点为空,访问栈顶元素(中),然后将当前节点设为右节点继续判断
