@@ -65,7 +65,6 @@ void inorderTraversalRecursion(TreeNode *node)
             tmpNode = treeNodeStack.top();
             treeNodeStack.pop();
             show(tmpNode);
-
             tmpNode = tmpNode->right;    
         }
     }
