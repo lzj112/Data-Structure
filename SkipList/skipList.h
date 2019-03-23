@@ -29,9 +29,9 @@ typedef int ValueType;
 typedef struct nodeStructure *Node;
 struct nodeStructure
 {
-    KeyType key;
-    ValueType value;
-    Node forward[1];
+    KeyType key;        
+    ValueType value;    
+    Node forward[1];    //指向下一个结点的不同层数的指针
 };
 
 //定义跳跃表

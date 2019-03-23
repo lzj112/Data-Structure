@@ -24,7 +24,7 @@ void SkipList::NewList()
 {
     //设置NIL结点
     NewNodeWithLevel(0, NIL_);
-    NIL_->key = 0x7fffffff;
+    NIL_->key = 0x7fffffff; //int的极大值
     //设置链表List
     list_ = (List)malloc(sizeof(listStructure));
     list_->level = 0;
