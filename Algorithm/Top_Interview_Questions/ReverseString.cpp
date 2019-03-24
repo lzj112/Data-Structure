@@ -19,20 +19,6 @@ class Solution
   public:
     void reverseString(vector<char>& s)
     {
-        // int len = s.size();
-        // int l = 0, r = len - 1;
-        // char tmp;
-        // while (l <= r) 
-        // {
-        //     tmp = s[l]; 
-        //     s[l++] = s[r];
-        //     s[r--] = tmp; 
-        // }
-
-        // for (auto x : s) 
-        // {
-        //     std::cout << "\"" << x << "\","; 
-        // }
         int l = 0, r = s.size() - 1;
         while (l < r) 
         {
