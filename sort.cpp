@@ -49,7 +49,7 @@ void quick_sort(int l, int r, vector<int>& arr)
             while (i < j && arr[i] <= arr[target]) 
                 i++;
             if (i < j)
-            swap(arr[i], arr[j]);
+                swap(arr[i], arr[j]);
         }
         swap(arr[i], arr[target]);
         quick_sort(l, i - 1, arr);
@@ -67,7 +67,7 @@ void heap_adjust(vector<int>& arr, int i, int len)
     int tmp = arr[i];   //保存当前结点值
     for (int j = 2 * i + 1; j < len; j = 2 * j + 1)   //遍历其子结点
     {
-        //j是值较大的子结点下标
+        //得到j是值较大的子结点下标
         if (j + 1 < len && arr[j] < arr[j + 1]) 
             j++;    
         //如果当前结点比其最大子结点大,就不用调整,break
