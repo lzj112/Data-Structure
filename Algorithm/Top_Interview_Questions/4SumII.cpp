@@ -1,5 +1,4 @@
 /*
-579/5000  
 给出四个整数值的列表A、B、C、D，计算有多少元组(i、j、k、l)
 使得A[i] + B[j] + C[k] + D[l]为零。
 为了使问题简单一点，所有的a, B, C, D都有相同的长度N，
@@ -21,12 +20,6 @@ D = [ 0, 2]
 #include <map>
 #include <vector>
 using namespace std;
-
-/*
-将A B中的数两两相加利用map存储,和相同的次数++
-然后C D中两数相加,如果map中有相反数的,次数累加
-
-*/
 class Solution
 {
   public:
@@ -60,3 +53,10 @@ class Solution
         return ret;
     }   
 };
+
+
+/*
+将A B中的数两两相加利用map存储,和相同的次数++
+然后C D中两数相加,如果map中有相反数的,次数累加
+
+*/
