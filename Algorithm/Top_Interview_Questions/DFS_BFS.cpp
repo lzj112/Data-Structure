@@ -1,8 +1,10 @@
 //DFS
 
 #include <vector>
+#include <queue>
 #include <iostream>
 using namespace std;
+
 class Solution
 {
   public:
@@ -43,8 +45,6 @@ class Solution
 
 //BFS
 #define N 5
-
-using namespace std;
 
 int mat[N][N] = {
     {0, 1, 1, 0, 0},

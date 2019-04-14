@@ -90,7 +90,7 @@ void heap_sort(vector<int>& arr)
     for (int i = arr.size() / 2 - 1; i >= 0; i--)
         heap_adjust(arr, i, arr.size());
     
-    //不停交换堆顶元素和数组尾元素,再将剩下的元素重新调整编程大顶堆
+    //不停交换堆顶元素和数组尾元素,再将剩下的元素重新调整变成大顶堆
     for (int i = arr.size() - 1; i > 0; i--) 
     {
         swap(arr[0], arr[i]);   //交换堆顶元素和数组末尾元素

@@ -48,9 +48,7 @@ void preorderTraversalRecursion(TreeNode *node)
 void inorderTraversalRecursion(TreeNode *node)
 {
     if (node == nullptr) 
-    {
         return ;
-    }
     
     TreeNode* tmpNode = node;
     while (!treeNodeStack.empty() || tmpNode != nullptr) 
